@@ -5,7 +5,7 @@ from src.evaluate_condition import evaluate_condition
 
 class TestEvaluateCondition(unittest.TestCase):
     def testExample(self):
-        # TODO COMPLETAR
+
         evaluate_condition(1, "Eq", "10", "20")
         self.assertTrue(True)
         self.assertFalse(False)
