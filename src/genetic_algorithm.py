@@ -28,19 +28,18 @@ class GeneticAlgorithm():
         return self.generation
 
     def generate_crossovers(self, population: List[List[str]], fitness_by_individual: dict) -> List[List[str]]:
-        # TODO COMPLETAR
-        # Pista: no olvidarse de usar selection, deben crear una nueva poblacion
+        
         new_population = []
         while len(new_population) < self.population_size:
             p1 = selection(fitness_by_individual, self.tournament_size)[0]
             p2 = selection(fitness_by_individual, self.tournament_size)[0]      #Hay chance de que ambos padres sean el mismo. Lo permitimos ya que aún así los hijos pueden mutar y generar nuevos individuos
-            h1, h2 = crossover(p1, p2)      #No está claro para qué sirve el p_crossover si en todos los algoritmos vistos siempre se hace crossover el 100% de las veces y no se pide en la consigna
+            h1, h2 = crossover(p1, p2)      
             new_population.append(h1)
             new_population.append(h2)
         return new_population
 
     def generate_mutations(self, population: List[List[str]]) -> List[List[str]]:
-        # TODO COMPLETAR
+
         new_population = []
         for individual in population:
             new_population.append(individual)
@@ -50,7 +49,7 @@ class GeneticAlgorithm():
         return new_population
 
     def covered_all_branches(self, fitness_individual: float) -> bool:
-        # TODO COMPLETAR
+        
         return fitness_individual == 0     #fitness += 1 por cada branch no ejecutado. fitness = 0 --> todos los branches ejecutados
 
     def run(self):
@@ -67,7 +66,7 @@ class GeneticAlgorithm():
         # Continuar mientras la cantidad de generaciones es menor que 1000
         # y no haya ningun individuo que cubra todos los objetivos
 
-        while (self.generation < 1000 and not self.covered_all_branches(self.fitness_best_individual)): # TODO COMPLETAR
+        while (self.generation < 1000 and not self.covered_all_branches(self.fitness_best_individual)): 
 
             # Producir una nueva poblacion en base a la anterior.
             # Usar selection, crossover y mutation.
