@@ -8,7 +8,7 @@ from src.get_fitness_cgi_decode import get_fitness_cgi_decode
 
 class TestGeneticAlgorithm(unittest.TestCase):
     def test1(self):
-        # TODO COMPLETAR
+
         seed(1)
         ga = GeneticAlgorithm()
         result = ga.run()
@@ -21,7 +21,7 @@ class TestGeneticAlgorithm(unittest.TestCase):
         print("Branch coverage:", 100 - ga.get_fitness_best_individual()*10, "%") #fitness = 0 -> 100% branch coverage
 
     def test2(self):
-        # TODO COMPLETAR
+        
         seed("2DaUnErrorRarisimo")
         ga = GeneticAlgorithm()
         result = ga.run()
@@ -33,7 +33,7 @@ class TestGeneticAlgorithm(unittest.TestCase):
         print("Branch coverage:", 100 - ga.get_fitness_best_individual()*10, "%")
 
     def test3(self):
-        # TODO COMPLETAR
+        
         seed(3)
         ga = GeneticAlgorithm()
         result = ga.run()
