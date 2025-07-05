@@ -9,7 +9,7 @@ def selection(fitness_by_individual: dict, tournament_size: int) -> Tuple[list[s
     tournament_size: Tamaño del torneo (entero positivo).
     """
     winner = None
-    # TODO: COMPLETAR
+    
     #  (Tournament selection)
     participantes = list(fitness_by_individual.keys())
     seleccionados = sample(participantes, tournament_size)
